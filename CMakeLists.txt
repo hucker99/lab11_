@@ -39,7 +39,8 @@ find_package(Boost
         filesystem)
 
 find_package(Threads)
-
+hunter_add_package(Async++)
+find_package(Async++ CONFIG REQUIRED)
 add_library(logs INTERFACE
         )
 add_library(header INTERFACE
@@ -73,8 +74,8 @@ target_include_directories(
         logs
         INTERFACE $<BUILD_INTERFACE:${${PROJECT_NAME}_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-target_link_libraries(template Boost::thread Boost::program_options Boost::filesystem)
-target_link_libraries(header INTERFACE Boost::thread Boost::program_options Boost::filesystem)
+target_link_libraries(template Boost::thread Boost::program_options Boost::filesystem Async++::Async++)
+target_link_libraries(header INTERFACE Boost::thread Boost::program_options Boost::filesystem Async++::Async++)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
