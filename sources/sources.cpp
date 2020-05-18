@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
             config = vm["config"].as<std::string>();
             if (config != "Debug")
             {
-              conf=false;
+              conf = false;
             }
             std::cout << "config:" << config << std::endl;
         } else {
