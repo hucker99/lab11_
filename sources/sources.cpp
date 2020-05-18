@@ -10,7 +10,7 @@ bool pack = false;
 bool done = false;
 bool install = false;
 int seconds = 0;
-
+bool conf=true;
 
 int main(int argc, char **argv) {
     std::string config;
@@ -33,6 +33,10 @@ int main(int argc, char **argv) {
 
         if (vm.count("config")) {
             config = vm["config"].as<std::string>();
+            if (config!="Debug")
+            {
+              conf=false;
+            }
             std::cout << "config:" << config << std::endl;
         } else {
             config = "Debug";
@@ -66,12 +70,21 @@ int main(int argc, char **argv) {
             }
         });
     }
-    auto task1 = async::spawn(config , [] (std::string& con ){
+    auto task1 = async::spawn([] {
         processes.push_back
         (boost::this_process::get_id());
-        con = building + con;
-        exit_code = boost::process::system
-                (con);
+        if (conf)
+        {
+            std::string tmp=building+type1;
+            exit_code = boost::process::system
+                    (tmp);
+        }
+        else
+        {
+            std::string tmp=building+type2;
+            exit_code = boost::process::system
+                    (tmp);
+        }
         processes.pop_back();
     });
     auto task2 = task1.then([] {
