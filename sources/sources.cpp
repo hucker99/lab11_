@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
     if (seconds) {
         auto task = async::spawn([] {
             sleep(seconds);
-            for (auto a: processes) {
+            for (const auto &a : processes) {
                 kill(a, SIGINT);
             }
         });
