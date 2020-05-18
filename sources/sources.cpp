@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
             }
         });
     }
-    auto task1 = async::spawn(config,[] (std::string& con ){
+    auto task1 = async::spawn(config , [] (std::string& con ){
         std::error_code ec;
         processes.push_back
         (boost::this_process::get_id());
