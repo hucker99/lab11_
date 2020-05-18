@@ -74,13 +74,13 @@ int main(int argc, char **argv) {
         processes.push_back
         (boost::this_process::get_id());
         if (conf) {
-            std::string tmp = std::string ( building ) +
-                    std::string ( type1 );
+            std::string tmp = std::string(building) +
+                              std::string(type1);
             exit_code = boost::process::system
                     (tmp);
         } else {
-            std::string tmp = std::string ( building ) +
-                              std::string ( type2 );
+            std::string tmp = std::string(building) +
+                              std::string(type2);
             exit_code = boost::process::system
                     (tmp);
         }
