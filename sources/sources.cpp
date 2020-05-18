@@ -67,12 +67,11 @@ int main(int argc, char **argv) {
         });
     }
     auto task1 = async::spawn(config , [] (std::string& con ){
-        std::error_code ec;
         processes.push_back
         (boost::this_process::get_id());
         con = building + con;
         exit_code = boost::process::system
-                (config, ec);
+                (con);
         processes.pop_back();
     });
     auto task2 = task1.then([] {
