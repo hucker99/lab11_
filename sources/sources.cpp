@@ -12,7 +12,7 @@ bool install = false;
 unsigned int seconds = 0;
 bool conf = true;
 
-int main() {
+int main(int argc, char **argv) {
     std::string config;
     try {
         boost::program_options
