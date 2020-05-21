@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
                 ("pack", "package")
                 ("install", "_install")
                 ("timeout", boost::
-                program_options::value<int>(), "timing");
+                program_options::value<unsigned int>(), "timing");
 
         boost::
         program_options::variables_map vm;
@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
             install = false;
         }
         if (vm.count("timeout")) {
-            seconds = vm["timeout"].as<int>();
+            seconds = vm["timeout"].as<unsigned int>();
         } else {
             seconds = 0;
         }
