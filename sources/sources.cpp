@@ -4,15 +4,15 @@
 #include <process.h>
 #include <constants.h>
 
-int exit_code;
+unsigned int exit_code;
 std::vector <pid_t> processes;
 bool pack = false;
 bool done = false;
 bool install = false;
-int seconds = 0;
+unsigned int seconds = 0;
 bool conf = true;
 
-int main(int argc, char **argv) {
+int main() {
     std::string config;
     try {
         boost::program_options
