@@ -1,3 +1,5 @@
+// Copyright 2018 Your Name <your_email>
+
 #ifndef LAB11_PROCESS_H
 #define LAB11_PROCESS_H
 #include <iostream>
