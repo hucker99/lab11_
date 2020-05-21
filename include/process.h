@@ -1,7 +1,3 @@
-//
-// Created by sergei on 16.05.2020.
-//
-
 #ifndef LAB11_PROCESS_H
 #define LAB11_PROCESS_H
 #include <iostream>
