@@ -1,3 +1,5 @@
+// Copyright 2018 Your Name <your_email>
+
 #ifndef LAB11_CONSTANTS_H
 #define LAB11_CONSTANTS_H
 #define building "cmake -H.. -B../_builds -DCMAKE_INSTALL_PREFIX=_install -DCMAKE_BUILD_TYPE="
