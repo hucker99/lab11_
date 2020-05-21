@@ -1,7 +1,3 @@
-//
-// Created by sergei on 16.05.2020.
-//
-
 #ifndef LAB11_CONSTANTS_H
 #define LAB11_CONSTANTS_H
 #define building "cmake -H.. -B../_builds -DCMAKE_INSTALL_PREFIX=_install -DCMAKE_BUILD_TYPE="
