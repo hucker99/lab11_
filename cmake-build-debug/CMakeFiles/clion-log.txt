@@ -10,3 +10,4 @@ CMake Error at CMakeLists.txt:16 (HunterGate):
 
 
 -- Configuring incomplete, errors occurred!
+
